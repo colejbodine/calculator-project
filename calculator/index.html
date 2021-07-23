@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <title>Calculator</title>
         <script type="text/javascript" src="controller.js"></script>
         <script type="text/javascript" src="calculator.js"></script>
         <link rel="stylesheet" type="text/css" href="calculator.css" />
     </head>
+
     <body>
         <!-- Fill in html here -->
+        <div class="container">
+            <div class="number-inputs">
+                <input type="number">
+                <input type="number">
+            </div>
+            <div class="radio-inputs">
+                <input type="radio" id="add" name="operation" value="add">
+                <label for="add">Add</label>
+                <input type="radio" id="subtract" name="operation" value="subtract">
+                <label for="subtract">Subtract</label>
+                <input type="radio" id="multiply" name="operation" value="multiply">
+                <label for="multiply">Multiply</label>
+                <input type="radio" id="divide" name="operation" value="divide">
+                <label for="divide">Divide</label>
+            </div>
+            <div class="buttons">
+                <button>=</button>
+                <button>Clear</button>
+            </div>
+        </div>
     </body>
+
 </html>
