@@ -12,24 +12,70 @@ class Calculator {
     }
 
     // determine the current operation's label
-    getAction() {}
+    getAction() {
+        let action = null;
+        switch(this.operator) {
+            case "add":
+                action = "adding";
+                break;
+            case "subtract":
+                action = "subtracting";
+                break;
+            case "multiply":
+                action = "multiplying";
+                break;
+            case "divide":
+                action = "dividing";
+                break;
+            default:
+                "adding";
+                break;
+        }
+        return action;
+    }
 
     // performa a calculation based on the currently selected operation
-    operate() {}
+    operate() {
+        switch(this.operator) {
+            case "add":
+                return this.add();
+            case "subtract":
+                return this.subtract();
+            case "multiply":
+                this.multiply();
+            case "divide":
+                return this.divide();
+            default:
+                return this.add();
+        }
+    }
 
     attemptedDivideByZero = false;
 
     // perform addition operation
-    add() {}
+    add() {
+        this.value = this.firstNumber + this.secondNumber;
+    }
 
     // perform subtraction operation
-    subtract() {}
+    subtract() {
+        this.value = this.firstNumber - this.secondNumber;
+    }
 
     // perform multiplication operation
-    multiply() {}
+    multiply() {
+        this.value = this.firstNumber * this.secondNumber;
+    }
 
     // perform divide operation
-    divide() {}
+    divide() {
+        if (this.secondNumber === 0) {
+            this.attemptedDivideByZero = true;
+        }
+        if (!this.attemptedDivideByZero) {
+            this.value = this.firstNumber / this.secondNumber;
+        }
+    }
 }
 
 //DO NOT TOUCH THIS LINE OF CODE//

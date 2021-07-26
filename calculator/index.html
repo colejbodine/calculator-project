@@ -5,6 +5,7 @@
         <title>Calculator</title>
         <script type="text/javascript" src="controller.js"></script>
         <script type="text/javascript" src="calculator.js"></script>
+        <script type="text/javascript" src="test.js"></script>
         <link rel="stylesheet" type="text/css" href="calculator.css" />
     </head>
 
@@ -12,23 +13,40 @@
         <!-- Fill in html here -->
         <div class="container">
             <div class="number-inputs">
-                <input type="number">
-                <input type="number">
+                <div class="number-input">
+                    <label for="first-number" class="number-input">First Number</label>
+                    <br>
+                    <input type="number" id="firstNumber" name="number">
+                </div>
+                <div class="number-input">
+                    <label for="second-number">Second Number</label>
+                    <br>
+                    <input type="number" id="secondNumber" name="number">
+                </div>
             </div>
             <div class="radio-inputs">
-                <input type="radio" id="add" name="operation" value="add">
-                <label for="add">Add</label>
-                <input type="radio" id="subtract" name="operation" value="subtract">
-                <label for="subtract">Subtract</label>
-                <input type="radio" id="multiply" name="operation" value="multiply">
-                <label for="multiply">Multiply</label>
-                <input type="radio" id="divide" name="operation" value="divide">
-                <label for="divide">Divide</label>
+                <div class="radio-input">
+                    <input type="radio" id="add" name="operation" value="add">
+                    <label for="add">Add</label>
+                </div>
+                <div class="radio-input">
+                    <input type="radio" id="subtract" name="operation" value="subtract">
+                    <label for="subtract">Subtract</label>
+                </div>
+                <div class="radio-input">
+                    <input type="radio" id="multiply" name="operation" value="multiply">
+                    <label for="multiply">Multiply</label>
+                </div>
+                <div class="radio-input">
+                    <input type="radio" id="divide" name="operation" value="divide">
+                    <label for="divide">Divide</label>
+                </div>
             </div>
             <div class="buttons">
-                <button>=</button>
-                <button>Clear</button>
+                <button onClick="calculate()">=</button>
+                <button onClick="clearValues()">Clear</button>
             </div>
+            <p id="result">Let me calculate something for you!</p>
         </div>
     </body>
 
